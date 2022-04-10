@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="csslink" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav>
+            <ul class="nav-list">
+                <li>HOME</li>
+                <li>SİTES</li>
+                <li>CONTACT</li>
+                <li id="resume">RESUME</li>
+            </ul>
+        </nav>
+    </header>
+    <button id="Darkmodeswitch-button">SWİTCH</button>
+
+
+    <script>
+        const darkMode = document.getElementById('Darkmodeswitch-button');
+
+
+        darkMode.addEventListener('click', () => {
+            document.getElementById('csslink').href = "/dark-mode/darkmode.css";
+
+            darkMode.setAttribute('id', 'Darkmodeswitch-button2');
+            const darkMode2 = document.getElementById('Darkmodeswitch-button2');
+
+            darkMode2.addEventListener('click', () => {
+
+                document.getElementById('csslink').href = "/style.css";
+                darkMode2.setAttribute('id', 'Darkmodeswitch-button');
+
+                const darkMode = document.getElementById('Darkmodeswitch-button');
+                darkMode.addEventListener('click', () => {
+                    document.getElementById('csslink').href = "/dark-mode/darkmode.css";
+                    darkMode.setAttribute('id', 'Darkmodeswitch-button2');
+            const darkMode2 = document.getElementById('Darkmodeswitch-button2');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
