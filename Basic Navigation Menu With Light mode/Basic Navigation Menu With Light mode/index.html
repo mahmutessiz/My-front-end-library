@@ -25,27 +25,20 @@
 
 
     <script>
-        const darkMode = document.getElementById('Darkmodeswitch-button');
-
+         const darkMode = document.getElementById('Darkmodeswitch-button');
+        const darkMode2 = document.getElementById('Darkmodeswitch-button2');
+        darkMode2.style.visibility= 'hidden';
 
         darkMode.addEventListener('click', () => {
             document.getElementById('csslink').href = "/dark-mode/darkmode.css";
+            darkMode.style.visibility= 'hidden';
+            darkMode2.style.visibility= 'visible';
+        });
 
-            darkMode.setAttribute('id', 'Darkmodeswitch-button2');
-            const darkMode2 = document.getElementById('Darkmodeswitch-button2');
-
-            darkMode2.addEventListener('click', () => {
-
-                document.getElementById('csslink').href = "/style.css";
-                darkMode2.setAttribute('id', 'Darkmodeswitch-button');
-
-                const darkMode = document.getElementById('Darkmodeswitch-button');
-                darkMode.addEventListener('click', () => {
-                    document.getElementById('csslink').href = "/dark-mode/darkmode.css";
-                    darkMode.setAttribute('id', 'Darkmodeswitch-button2');
-            const darkMode2 = document.getElementById('Darkmodeswitch-button2');
-                });
-            });
+        darkMode2.addEventListener('click', () => {
+            document.getElementById('csslink').href = "/style.css";
+            darkMode2.style.visibility= 'hidden';
+            darkMode.style.visibility= 'visible';
         });
     </script>
 </body>
