@@ -1,0 +1,39 @@
+body {
+    display: grid;
+    place-items: center;
+    width: 100;
+    height: 100vh;
+}
+
+.container {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: darkgray;
+}
+
+.toggle {
+    width: 50%;
+    height: 2rem;
+    border: 1px solid rgba(255, 0, 0, 0);
+    border-radius: 1rem;
+    position: absolute;
+    background-color: rgba(49, 105, 49, 0.644);
+    left: 0;
+
+    transition: 500ms ease;
+}
+
+.right {
+    margin-left: 50%;
+    background-color: rgba(255, 0, 0, 0.541);
+    transition: 500ms ease;
+}
